@@ -1,3 +1,80 @@
+# 1.1.0
+
+- Added mobile view for the main layout.
+- Removed unnecessary classes for different components.
+- Updated example.
+  - Added sidebar behavior in desktop and mobile.
+- Updated default font definitions.
+- Updated example.
+
+### [ icons ]
+
+- Updated icon font definition using `woff`/`woff2` formats.
+- Removed unnecessary font files.
+
+### [ code ]
+
+- Set default font family.
+
+### [ basics ]
+
+- Fixed `.main` style to be compatible with all browsers.
+
+### [ footer ]
+
+- Fixed desktop and mobile view.
+
+### [ grid ]
+
+- Added responsive rules for desktop and mobile.
+
+### [ panels ]
+
+- Removed `.panel-default` and subclasses.
+- Updated style.
+
+
+### [ tabbar ]
+
+- Removed class: `.tablbar__search`.
+
+### [ toolbar ]
+
+- Fixed `.toolbar__left`/`.toolbar__right` classes.
+- Removed classes and subclasses:
+  - `.toolbar--article`.
+  - `.toolbar--mobile__icon-left`/`.toolbar--mobile__icon-right`.
+  - `.toolbar--mobile__icon-left`/`.toolbar--mobile__icon-right`.
+  - `.toolbar--right-menu`.
+  - `.toolbar--scrolling`.
+  - `.toolbar__calltoaction`.
+  - `.toolbar__history-label`.
+  - `.toolbar__link`.
+  - `.toolbar__navbar`.
+  - `.toolbar__toggle`.
+
+### [ sidebar ]
+
+- Removed classes and subclasses:
+  - `.sidebar .control`.
+  - `.sidebar__block`.
+  - `.sidebar__controls`.
+  - `.sidebar__form`.
+  - `.sidebar__link`.
+  - `.sidebar__tag`.
+  - `.sidebar__tags`.
+  - `.sidebar__title`.
+  - `.sidebar--details-view`.
+  - `.sidebar--filters`.
+  - `.sidebar--scrolling`.
+- Updated style.
+
+### [ example ]
+
+- Added sidebar behavior in desktop and mobile views.
+- Added `less-vars-to-js` package to get style values in the view.
+- Updated example and its font definitions.
+
 # 1.0.0
 
 - First official release of adidas YARN Design System.
