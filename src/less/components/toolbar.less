@@ -16,29 +16,23 @@
     .font-family-heading-bold();
   }
 
-  &__history-label {
-    color: @primary-darkgray;
-    font-weight: 700;
-  }
-
   &__tooltip {
     height: @toolbar-height;
     list-style-type: none;
     .flex(row, center, center);
   }
 
-  &__calltoaction {
-    .pull-left();
-  }
-
-  &__link {
-    padding: 0 @padding-small-horizontal;
-  }
-
   &__left,
   &__right {
-    z-index: @zindex-navbar-fixed;
     .flex(row, center);
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
+
+  &__right {
+    justify-content: flex-end;
   }
 
   &__notice {
@@ -73,16 +67,6 @@
     border-left: 1px solid @primary-lightgray;
   }
 
-  &__navbar {
-    list-style-type: none;
-    margin: 0;
-    .flex(row, center, center);
-
-    &.tabbar--details {
-      .pull-right();
-    }
-  }
-
   &__slider {
     height: @toolbar-height;
     .position(fixed, @navbar-height, @toolbar-height);
@@ -97,16 +81,6 @@
     }
   }
 
-  &__toggle {
-    z-index: @zindex-navbar-fixed;
-  }
-
-  &--article {
-    border-bottom: none;
-    margin-bottom: @padding-small-vertical;
-    .flex(row, center, space-between);
-  }
-
   &--desktop {
     .flex(row, center, space-between);
     .hidden-xs();
@@ -114,38 +88,7 @@
 
   &--mobile {
     height: @toolbar-height;
-    z-index: @zindex-navbar;
     .position(fixed, @navbar-height, 0, null, 0);
     .visible-xs();
-
-    &__icon-left {
-      .position(absolute, 0, null, 0);
-    }
-
-    &__icon-right {
-      z-index: @zindex-navbar;
-    }
-
-    &__text {
-      font-size: @cap-height-h1;
-      .font-family-base-bold();
-    }
-  }
-
-  &--right-menu {
-    background-color: @primary-white;
-    display: block;
-    .flex(row, center, space-between);
-  }
-
-  &--scrolling {
-    border-bottom: 1px solid @primary-silver;
-    z-index: @zindex-navbar;
-    .position(fixed, @navbar-height, 0, null, 0);
-    .flex(row, center, space-between);
-
-    &--hide {
-      display: none;
-    }
   }
 }

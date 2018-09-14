@@ -1,7 +1,7 @@
 <template>
   <div class="toolbar">
     <div class="toolbar__left">
-      <button class="btn btn-tertiary toolbar__btn-square toolbar__toggle" @click="toggleToolbar">
+      <button class="btn btn-tertiary btn-square" @click="toggleToolbar">
         <span class="yarn-icon yarn-icon--filter"
             :class="{ 'color--blue-100': $store.state.sidebarOpen }">
         </span>
