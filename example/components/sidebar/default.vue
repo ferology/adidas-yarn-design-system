@@ -1,8 +1,8 @@
 <template>
   <aside class="sidebar"
       :class="{
-        open: $store.state.sidebarOpen,
-        closed: !$store.state.sidebarOpen
+        open: sidebarOpen,
+        closed: !sidebarOpen
       }">
     <div class="sidebar__main">
       <div class="panel-group">
@@ -37,12 +37,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import { getRoutes } from '~/services/routes';
 import panelItem from './panel-item.vue';
 import panelTab from './panel-tab.vue';
 
 export default {
   computed: {
+    ...mapGetters([ 'sidebarOpen' ]),
     routes() {
       const routes = [];
       const sidebarRoutes = getRoutes()

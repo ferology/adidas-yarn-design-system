@@ -15,15 +15,34 @@
   height: 100%;
   min-height: 1px;
   overflow-y: auto;
-  flex: 0 0 auto;
-  flex-basis: @sidebar-width;
+  .transform(margin-left);
+
+  @media screen and (min-width: @screen-xs-max) {
+    flex: 0 0 auto;
+    flex-basis: @sidebar-width;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: @sidebar-width-mobile;
+    max-height: calc(100% ~"-" (@header-height + @toolbar-height));
+    display: block;
+    position: fixed;
+    z-index: @zindex-sidebar;
+  }
 
   &.closed {
-    .transform(margin-left,  -(@sidebar-width));
+    @media screen and (min-width: @screen-xs-max) {
+      margin-left: -@sidebar-width;
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+      margin-left: -@sidebar-width-mobile;
+      .transform(unset);
+    }
   }
 
   &.open {
-    .transform(margin-left, 0);
+    margin-left: 0;
   }
 
   &__header {

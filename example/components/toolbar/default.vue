@@ -1,9 +1,9 @@
 <template>
   <div class="toolbar">
     <div class="toolbar__left">
-      <button class="btn btn-tertiary btn-square" @click="toggleToolbar">
+      <button class="btn btn-tertiary btn-square" @click="toggleSidebar">
         <span class="yarn-icon yarn-icon--filter"
-            :class="{ 'color--blue-100': $store.state.sidebarOpen }">
+            :class="{ 'color--blue-100': sidebarOpen }">
         </span>
       </button>
       <span class="toolbar__vertical-divider"></span>
@@ -12,11 +12,14 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
+
 export default {
+  computed: {
+    ...mapGetters([ 'sidebarOpen' ])
+  },
   methods: {
-    toggleToolbar() {
-      this.$store.commit('toggleSidebar');
-    }
+    ...mapActions([ 'toggleSidebar' ])
   }
 };
 </script>

@@ -41,6 +41,7 @@
 //** Sidebar options
 @transition-speed: .6s;
 @sidebar-width: 16em;
+@sidebar-width-mobile: 90%;
 @sidebar-padding-horizontal: 1rem;
 @sidebar-padding-vertical: .75em;
 
@@ -275,6 +276,7 @@
 //
 // Note: These variables are not generated into the Customizer.
 
+@zindex-sidebar: 980;
 @zindex-navbar: 1000;
 @zindex-dropdown: 1010;
 @zindex-navbar-fixed: 1030;
@@ -308,9 +310,9 @@
 @screen-lg-desktop: @screen-lg-min;
 
 // So media queries don't overlap when required, provide a maximum
-@screen-xs-max: (@screen-sm-min - 1rem);
-@screen-sm-max: (@screen-md-min - 1rem);
-@screen-md-max: (@screen-lg-min - 1rem);
+@screen-xs-max: @screen-sm-min;
+@screen-sm-max: @screen-md-min;
+@screen-md-max: @screen-lg-min;
 
 //== Grid system
 //
