@@ -6,9 +6,14 @@
   background-color: @primary-white;
   border-bottom: 1px solid @primary-lightgray;
   color: @primary-darkgray;
-  width: 100%;
   height: @toolbar-height;
-  .position(relative);
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+    position: fixed;
+    top: @header-height;
+    z-index: @zindex-navbar-fixed;
+  }
 
   &__title {
     color: @primary-nickel;

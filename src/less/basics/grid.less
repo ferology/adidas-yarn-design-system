@@ -2,18 +2,24 @@
 
 .main {
   height: 100%;
-  width: 100%;
   min-height: 0;
   min-width: 0;
-  flex: 1 1 auto;
-  .flex(row);
+
+  @media screen and (min-width: @screen-xs-max) {
+    flex: 1 1 auto;
+    .flex(row);
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    padding-top: @header-height + @toolbar-height;
+    z-index: @zindex-navbar-fixed;
+  }
 }
 
 .container {
   background-color: @primary-white;
   padding-left: 0;
   padding-right: 0;
-  width: 100%;
   flex: 1 1 auto;
   overflow-y: auto;
 
@@ -30,7 +36,7 @@
   }
 
   @media screen and (max-width: @screen-xs-max) {
-    padding-top: @toolbar-height;
+    display: block;
   }
 
   .section {
