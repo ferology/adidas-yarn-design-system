@@ -13,7 +13,7 @@
             <nuxt-link class="panel-title__title link label"
                 :to="{ name: route.name }"
                 slot="tabTitle"
-                v-on:click.native="navigate">
+                @click.native="navigate">
               {{ $t(`views.${ route.name }.name`) }}
             </nuxt-link>
             <ul class="list-group list-group--vertical" slot="tabContent">
@@ -22,7 +22,7 @@
                   :key="subroute.name">
                 <nuxt-link class="link label"
                     :to="{ name: subroute.name }"
-                    v-on:click.native="navigate">
+                    @click.native="navigate">
                   {{ $t(`views.${ subroute.name }.name`) }}
                 </nuxt-link>
               </li>
@@ -31,7 +31,7 @@
           <panel-item v-else :key="route.name">
             <nuxt-link class="link label"
                 :to="{ name: route.name }"
-                v-on:click.native="navigate">
+                @click.native="navigate">
               {{ $t(`views.${ route.name }.name`) }}
             </nuxt-link>
           </panel-item>

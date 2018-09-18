@@ -1,9 +1,11 @@
 # 1.1.0
 
 - Added mobile view for the main layout.
+- Added new icons.
 - Removed unnecessary classes for different components.
 - Updated example.
   - Added sidebar behavior in desktop and mobile.
+  - Dynamic calculation of mobile/desktop breackpoint using font size and LESS varibles file.
 - Updated default font definitions.
 - Updated example.
 
@@ -77,6 +79,7 @@
 
 - Added sidebar behavior in desktop and mobile views.
 - Added `less-vars-to-js` package to get style values in the view.
+- Added a margin after the `main` container in the mobile view.
 - Improved foundation icons page using the SVG icons file as source to get the list of icons.
 - Updated example and its font definitions.
 
