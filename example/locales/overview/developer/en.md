@@ -16,11 +16,11 @@ Since **YARN** is on [GitHub][yarn], a developer is able to get involved and sug
 
 Bootstrap is a front-end framework used to define HTML elements like grids, typography, inputs and other interface components, as well as optional JS extensions.
 
-Currently **YARN** has 2 different views:
+Currently **YARN** has two different views based on the default font size of `16px`.
 
-- Mobile version: `screen width < 980px`.
-    - Left sidebar and tabbar components are hidden by default.
-- Desktop version `screen width >= 980px`.
+- Mobile version: `screen width < 60rem` (`960px`).
+  - Left sidebar and tabbar components are hidden by default.
+- Desktop version `screen width >= 60rem` (`960px`).
 
 ## installation
 
@@ -76,7 +76,7 @@ There are several ways to define the **YARN** fonts:
 - Generic fonts: in order to avoid issues, three generic fonts have been set.
 - Included fallback: fonts definition using local installed fonts.
 - Specific fonts file: it has to include the definitions pointing to online files or local files.
-    - [GitHub][open-source-typefaces] (via NPM) provides a lot of open source typefaces which can be loaded as local files.
+  - [GitHub][open-source-typefaces] (via NPM) provides a lot of open source typefaces which can be loaded as local files.
 
 ## GitHub
 

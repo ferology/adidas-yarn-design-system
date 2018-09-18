@@ -18,6 +18,7 @@
 
 ### [ basics ]
 
+- Updated mobile/desktop breakpoint to be `60rem` (`960px`).
 - Fixed `.main` style to be compatible with all browsers.
 
 ### [ footer ]

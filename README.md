@@ -14,11 +14,11 @@
 **YARN** is based on [Bootstrap v3][bootstrap], which is a front-end framework used to define HTML elements
 like grids, typography, inputs and other  interface components, as well as optional JS extensions.
 
-Currently **YARN** has two different views:
+Currently **YARN** has two different views based on the default font size of `16px`.
 
-- Mobile version: `screen width < 980px`.
-    - Left sidebar and tabbar components are hidden by default.
-- Desktop version `screen width >= 980px`.
+- Mobile version: `screen width < 60rem` (`960px`).
+  - Left sidebar and tabbar components are hidden by default.
+- Desktop version `screen width >= 60rem` (`960px`).
 
 ## Use cases
 
@@ -45,13 +45,13 @@ On the other hand, the use can redefine the fonts to be displayed, read [font de
 ## Installation and running
 
 - In development mode:
-    ```
-    npm install
-    ```
+  ```
+  npm install
+  ```
 - Run time:
-    ```
-    npm install @adidas/yarn-design-system
-    ```
+  ```
+  npm install @adidas/yarn-design-system
+  ```
 
 Load the library files in the HTML of your application:
 
@@ -120,32 +120,32 @@ Working with more than one font in **YARN** requires not only to download the fo
 The way to do it is using static CDN files or local files, to be able to point to them in a safe way. [GitHub][open-source-typefaces] (via NPM) provides a lot of open source typefaces (MIT license) which can be loaded as local files in `woff` and `woff2` formats, which are compatible with modern browsers.
 
 1. Fonts installation:
-    ```
-    npm install typeface-poppins typeface-roboto typeface-roboto-mono
-    ```
+  ```
+  npm install typeface-poppins typeface-roboto typeface-roboto-mono
+  ```
 2. Font definitions file loaded within the project files:
-    - Do not forget to include the local fallbacks.
-    - If the file is processed by `webpack`, the fonts can be pointed using: `~typeface-NAME/files/FONT-FILE`.
-    ```css
-    @font-face {
-      font-family: 'yarn-heading';
-      font-weight: 100;
-      font-style: normal;
-      src: local('Poppins ExtraLight'), local('Poppins-ExtraLight'),
-        url('node_modules/typeface-poppins/files/poppins-latin-200.woff2') format('woff2'),
-        url('node_modules/typeface-poppins/files/poppins-latin-200.woff') format('woff');
-    }
+  - Do not forget to include the local fallbacks.
+  - If the file is processed by `webpack`, the fonts can be pointed using: `~typeface-NAME/files/FONT-FILE`.
+  ```css
+  @font-face {
+    font-family: 'yarn-heading';
+    font-weight: 100;
+    font-style: normal;
+    src: local('Poppins ExtraLight'), local('Poppins-ExtraLight'),
+      url('node_modules/typeface-poppins/files/poppins-latin-200.woff2') format('woff2'),
+      url('node_modules/typeface-poppins/files/poppins-latin-200.woff') format('woff');
+  }
 
-    @font-face {
-      font-family: 'yarn-base';
-      ...
-    }
+  @font-face {
+    font-family: 'yarn-base';
+    ...
+  }
 
-    @font-face {
-      font-family: 'yarn-monospace';
-      ...
-    }
-    ```
+  @font-face {
+    font-family: 'yarn-monospace';
+    ...
+  }
+  ```
 
 See how a font definitions file has been created in the [**YARN** documentation page](example/styles/fonts.less).
 
@@ -209,13 +209,13 @@ HOST=//name.domain:port BASE=app npm run doc
 The script to develop this project have to be executed in different terminals because they have to be continuously running checking changes.
 
 - Library:
-    ```
-    npm run start:lib
-    ```
+  ```
+  npm run start:lib
+  ```
 - Example:
-    ```
-    npm run start:example
-    ```
+  ```
+  npm run start:example
+  ```
 
 Once the library is ready, and the example has been built, the application is ready in localhost: `http://localhost:3000`.
 
