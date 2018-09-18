@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
 import { icons } from '~/services/icons';
 
 export default {
@@ -40,16 +39,6 @@ export default {
         };
       });
     }
-  },
-  methods: {
-    ...mapActions([ 'toggleZoomControls' ])
-  },
-  mounted() {
-    console.log(icons);
-    this.toggleZoomControls(true);
-  },
-  destroyed() {
-    this.toggleZoomControls(false);
   }
 }
 </script>
