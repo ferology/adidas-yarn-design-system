@@ -12,21 +12,26 @@
               :name="`sidebar${ route.name }`">
             <nuxt-link class="panel-title__title link label"
                 :to="{ name: route.name }"
-                slot="tabTitle">
+                slot="tabTitle"
+                v-on:click.native="navigate">
               {{ $t(`views.${ route.name }.name`) }}
             </nuxt-link>
             <ul class="list-group list-group--vertical" slot="tabContent">
               <li class="list-group-item list-group-item-light"
                   v-for="subroute in route.children"
                   :key="subroute.name">
-                <nuxt-link class="link label" :to="{ name: subroute.name }">
+                <nuxt-link class="link label"
+                    :to="{ name: subroute.name }"
+                    v-on:click.native="navigate">
                   {{ $t(`views.${ subroute.name }.name`) }}
                 </nuxt-link>
               </li>
             </ul>
           </panel-tab>
           <panel-item v-else :key="route.name">
-            <nuxt-link class="link label" :to="{ name: route.name }">
+            <nuxt-link class="link label"
+                :to="{ name: route.name }"
+                v-on:click.native="navigate">
               {{ $t(`views.${ route.name }.name`) }}
             </nuxt-link>
           </panel-item>
@@ -37,7 +42,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import { getRoutes } from '~/services/routes';
 import panelItem from './panel-item.vue';
 import panelTab from './panel-tab.vue';
@@ -70,6 +75,9 @@ export default {
 
       return routes;
     }
+  },
+  methods: {
+    ...mapActions([ 'navigate' ])
   },
   components: {
     panelItem,

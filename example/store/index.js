@@ -24,6 +24,9 @@ export const actions = {
   initSidebar({ commit }) {
     commit(TOGGLE_SIDEBAR, !isMobile());
   },
+  navigate({ commit, state }) {
+    state.mobile && commit(TOGGLE_SIDEBAR, false);
+  },
   toggleSidebar({ commit, state }) {
     commit(TOGGLE_SIDEBAR, !state.sidebarOpen);
   },
