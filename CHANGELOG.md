@@ -9,6 +9,7 @@
 
 ### [ icons ]
 
+- Added `select-related` and `three-d` icons.
 - Updated icon font definition using `woff`/`woff2` formats.
 - Removed unnecessary font files.
 
@@ -76,6 +77,7 @@
 
 - Added sidebar behavior in desktop and mobile views.
 - Added `less-vars-to-js` package to get style values in the view.
+- Improved foundation icons page using the SVG icons file as source to get the list of icons.
 - Updated example and its font definitions.
 
 # 1.0.0
