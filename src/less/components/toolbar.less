@@ -7,6 +7,8 @@
   border-bottom: 1px solid @primary-lightgray;
   color: @primary-darkgray;
   height: @toolbar-height;
+  flex: 0 0 auto;
+  .flex(row, center, space-between);
 
   @media screen and (max-width: @screen-xs-max) {
     width: 100%;
@@ -21,15 +23,9 @@
     .font-family-heading-bold();
   }
 
-  &__tooltip {
-    height: @toolbar-height;
-    list-style-type: none;
-    .flex(row, center, center);
-  }
-
   &__left,
   &__right {
-    .flex(row, center);
+    .flex(row);
   }
 
   &__left {
@@ -38,31 +34,6 @@
 
   &__right {
     justify-content: flex-end;
-  }
-
-  &__notice {
-    color: @primary-darkgray;
-    padding: 0 @padding-large-horizontal;
-    font-size: @font-size-small;
-    height: @toolbar-height;
-    .flex(row, center, center);
-    .font-family-base-light();
-
-    &--no-padding {
-      padding: 0;
-    }
-
-    &--padding-left {
-      padding: 0 0 0 @padding-base-horizontal;
-    }
-
-    &--padding-right {
-      padding: 0 @padding-base-horizontal 0 0;
-    }
-
-    &.selected {
-      color: @blue-100;
-    }
   }
 
   &__vertical-divider {

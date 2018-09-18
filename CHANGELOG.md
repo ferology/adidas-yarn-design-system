@@ -51,7 +51,9 @@
   - `.toolbar__history-label`.
   - `.toolbar__link`.
   - `.toolbar__navbar`.
+  - `.toolbar__notice`.
   - `.toolbar__toggle`.
+  - `.toolbar__toltip`.
 
 ### [ sidebar ]
 
