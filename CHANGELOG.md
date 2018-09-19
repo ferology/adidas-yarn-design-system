@@ -57,7 +57,7 @@
   - `.toolbar__navbar`.
   - `.toolbar__notice`.
   - `.toolbar__toggle`.
-  - `.toolbar__toltip`.
+  - `.toolbar__tooltip`.
 
 ### [ sidebar ]
 
