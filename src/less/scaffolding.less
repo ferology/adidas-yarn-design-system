@@ -7,6 +7,10 @@
 // Scaffolding
 // --------------------------------------------------
 
+@-ms-viewport {
+  width: auto !important;
+}
+
 html {
   background-color: @body-bg;
   color: @text-color;
@@ -27,6 +31,7 @@ html {
 
   @media screen and (max-width: @screen-xs-max) {
     overflow-y: auto;
+    -ms-overflow-style: scrollbar;
   }
 }
 
