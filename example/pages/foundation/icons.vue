@@ -31,10 +31,10 @@ export default {
   computed: {
     icons() {
       return icons.map((icon) => {
-        const { className, code } = icon;
+        const { name, code } = icon;
 
         return {
-          className: `yarn-icon yarn-icon--${ className }`,
+          className: `yarn-icon yarn-icon--${ name }`,
           code
         };
       });
