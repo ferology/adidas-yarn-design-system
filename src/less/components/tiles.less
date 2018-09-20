@@ -90,7 +90,7 @@
   &__footer {
     background-color: @primary-lightgray;
     color: @primary-nickel;
-    max-height: @tile-height - 2.5em;
+    max-height: @tile-height - @tile-footer-offset;
     overflow: hidden;
     .transform(transform, translateY(calc(100% ~'-' @tile-footer-group-height)));
     .position(absolute, auto, 0, 0, 0);
