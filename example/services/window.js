@@ -3,7 +3,7 @@ import { style } from '~/services/style';
 let mobileBreakpoint = 0;
 
 if (process.browser) {
-  mobileBreakpoint = parseInt(style.variables['screen-xs-max'], 10);
+  mobileBreakpoint = parseInt(style.variable['screen-xs-max'], 10);
 }
 
 export function isMobile() {

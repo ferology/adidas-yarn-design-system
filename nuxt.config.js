@@ -69,7 +69,8 @@ module.exports = {
     markdown: readMarkdownFiles('example/locales'),
     routes: globalRoutes,
     style: {
-      variables: readStyleVariables('src/less/variables/variables.less'),
+      variable: readStyleVariables('src/less/variables/variables.less'),
+      color: readStyleVariables('src/less/variables/colors.less'),
       typography: readStyleVariables('src/less/variables/typography.less')
     }
   }
