@@ -42,6 +42,10 @@
 
 - Removed class: `.tablbar__search`.
 
+### [ tile ]
+
+- Improved hover behavior.
+
 ### [ toolbar ]
 
 - Fixed `.toolbar__left`/`.toolbar__right` classes.
